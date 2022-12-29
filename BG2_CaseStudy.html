@@ -11,7 +11,7 @@
 
 <meta name="author" content="Shuangshuang Xu, Jacob Williams, and Marco A.R. Ferreira" />
 
-<meta name="date" content="2022-12-16" />
+<meta name="date" content="2022-12-28" />
 
 <title>BG2 A. Thaliana Case Study</title>
 
@@ -353,7 +353,7 @@ display: none;
 <h1 class="title toc-ignore">BG2 A. Thaliana Case Study</h1>
 <h4 class="author">Shuangshuang Xu, Jacob Williams, and Marco A.R.
 Ferreira</h4>
-<h4 class="date">2022-12-16</h4>
+<h4 class="date">2022-12-28</h4>
 
 </div>
 
@@ -363,7 +363,12 @@ Ferreira</h4>
 <p>Code for the BG2 manuscript is located at <a href="https://github.com/marf-at-vt/BG2" class="uri">https://github.com/marf-at-vt/BG2</a>. For this case study,
 the code is sourced into the local environment with the following
 command.</p>
-<pre class="r"><code>source(url(&quot;https://raw.githubusercontent.com/marf-at-vt/BG2/main/R/BG2.R&quot;))</code></pre>
+<pre class="r"><code>library(GA)
+library(caret)
+library(memoise)
+library(Matrix)
+library(MASS)
+source(url(&quot;https://raw.githubusercontent.com/marf-at-vt/BG2/main/R/BG2.R&quot;))</code></pre>
 </div>
 <div id="bg2-a.-thaliana-case-study" class="section level2">
 <h2>BG2 A. Thaliana Case Study</h2>
@@ -386,8 +391,7 @@ code demonstrates how to obtain the results from the case study in the
 BG2 manuscript.</p>
 <p>This takes approximately 5 minutes on a Macbook Pro with a 2.6GHz
 Intel Core i5 processor.</p>
-<pre class="r"><code>set.seed(1330)
-load(url(&quot;https://github.com/marf-at-vt/Case_studies/blob/main/BG2_Data/AThaliana_CaseStudy.rda?raw=true&quot;))
+<pre class="r"><code>load(url(&quot;https://github.com/marf-at-vt/Case_studies/blob/main/BG2_Data/AThaliana_CaseStudy.rda?raw=true&quot;))
 n &lt;- length(Y)
 covariance &lt;- list()
 covariance[[1]] &lt;- kinship
@@ -398,9 +402,10 @@ output_casestudy &lt;- BG2(Y=Y, SNPs=SNPs, Fixed = NULL,
                         replicates=replicates, Tau=&quot;uniform&quot;,FDR_Nominal = 0.05, 
                         maxiterations = 4000, runs_til_stop = 400)
 SNP_Info[output_casestudy,]</code></pre>
-<pre><code>##       chromosome positions
-## 11205          1   6968274
-## 11657          1   7186893</code></pre>
+<pre><code>##       chromosome position
+## 11205          1  6968274
+## 11208          1  6969618
+## 11657          1  7186893</code></pre>
 <p>To further investigate SNPs discovered by BG2, we used the JBrowse
 software available online at <a href="https://jbrowse.arabidopsis.org/" class="uri">https://jbrowse.arabidopsis.org/</a>.</p>
 </div>
