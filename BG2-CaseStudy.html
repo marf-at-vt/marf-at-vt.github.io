@@ -353,7 +353,6 @@ display: none;
 <h1 class="title toc-ignore">BG2 A. Thaliana Case Study</h1>
 <h4 class="author">Shuangshuang Xu, Jacob Williams, and Marco A.R.
 Ferreira</h4>
-<h4 class="date">2022-12-28</h4>
 
 </div>
 
@@ -385,8 +384,8 @@ information, and the number of replicates of each ecotype for this
 <em>A. Thaliana</em> case study are available from the link below. The
 model chosen to fit based on results of the simulation study in the BG2
 manuscript is a Poisson generalized linear mixed model with a kinship
-random effect and an overdispersion random effect. Further, using a
-uniform prior for the nonlocal prior dispersion parameter <span class="math inline">\(\tau\)</span> has shown optimal results. The below
+random effect and an overdispersion random effect. Further, a simulation study has shown that a
+uniform prior for the nonlocal prior dispersion parameter <span class="math inline">\(\tau\)</span> leads to favorable statistical properties. The below
 code demonstrates how to obtain the results from the case study in the
 BG2 manuscript.</p>
 <p>This takes approximately 5 minutes on a Macbook Pro with a 2.6GHz
@@ -407,7 +406,8 @@ SNP_Info[output_casestudy,]</code></pre>
 ## 11208          1  6969618
 ## 11657          1  7186893</code></pre>
 <p>To further investigate SNPs discovered by BG2, we used the JBrowse
-software available online at <a href="https://jbrowse.arabidopsis.org/" class="uri">https://jbrowse.arabidopsis.org/</a>.</p>
+software available online at <a href="https://jbrowse.arabidopsis.org/" class="uri">https://jbrowse.arabidopsis.org/</a>. 
+These SNPs are located in protein-coding genes AT1G20090, AT1G20100, and AT1G20720.</p>
 </div>
 <div id="references" class="section level1">
 <h1>References</h1>
