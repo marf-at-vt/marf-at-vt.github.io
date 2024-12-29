@@ -1,0 +1,94 @@
+div#banner { 
+    height: 110px; 
+}
+body {
+    padding-left: 11em;
+    padding-bottom: 0em;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 25px;
+    color: #444444;
+	width: 75%;
+    background: #FCFCFC
+    }
+#container { 
+    height: 100%; 
+    padding: 5px; 
+} 
+img.floatRight { 
+    float: right; 
+    margin: 10px;
+}
+img.floatLeft { 
+    float: left; 
+    margin: 10px;
+}
+ul.navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 1.5em;
+    left: 1em;
+    width: 8.3em 
+    }
+h1 {
+	font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+	font-size: 30px;
+	line-height: 30px;
+	color: #191970
+    }
+h2 {
+	font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	color: #191970;
+	line-height: 10px;
+    line-height: 0px;
+    border-bottom: thin solid;
+    padding-bottom: 1em
+    }
+h3{
+	font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	color: #191970;
+	line-height: 0px;
+    border-bottom: thin solid;
+    padding-bottom: 1em
+    }
+a {
+    text-decoration: none
+}
+ul.navbar li {
+    background: #D6D6D6;
+    margin: 0.5em 0;
+    padding: 0.3em;
+	font-size: 15px
+    }
+ul.navbar li#current{
+    background: #B0C4DE;
+    margin: 0.5em 0;
+    padding: 0.3em
+    }
+ul.navbar a {
+  	font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    }
+a:link {
+    color: #104E8B; 
+    }
+a:visited {
+    color: #104E8B; 
+    }
+#whitehover a:hover {
+    color: white ;
+    }
+#blackhover a:hover {
+    color: black;
+    }
+footer {
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    font-size: 10px;
+    border-top: thin solid;
+	color: #191970
+    }
